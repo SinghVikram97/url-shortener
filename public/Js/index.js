@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
     let btn=$('#submit');
+    let shortLink=$('#shortLink');
 
     btn.click(function () {
 
@@ -10,8 +11,14 @@ $(document).ready(function () {
 
         console.log(getUrl);
 
-        $.get(getUrl,function (data) {
-            console.log(data);
+        $.post(getUrl,function (data) {
+
+            let shortUrl=data.shorterUrl;
+
+            shortUrl='http://localhost:4444/'+shortUrl;
+
+            shortLink.html(shortUrl);
+
         })
 
     })
