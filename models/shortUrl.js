@@ -4,7 +4,12 @@ const Schema=mongoose.Schema;
 
 const urlSchema=new Schema({
 
-   originalUrl:String,
+   originalUrl:{
+
+       type:String,
+       required:true
+
+   },
    shorterUrl:String
 
 },{timestamps:true});
