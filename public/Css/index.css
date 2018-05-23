@@ -3,4 +3,35 @@ body{
 }
 #heading{
     font-family: 'Nunito', sans-serif;;
+    font-size: 32px;
+    font-weight: 300;
+    color: rgb(51,51,51);
+    margin: 8px 0 0;
+}
+#url{
+    height: 50px;
+    border-radius: 100px;
+}
+
+#url[placeholder]{
+    font-size: 18px;
+    padding-left: 25px;
+}
+#submit{
+    color: #a9a9a9;
+    font-size: 35px;
+    position: absolute;
+    left: -60px;
+    top:6px
+}
+@media only screen and  (max-width: 412px) {
+
+    .col-2{
+
+    }
+    .col-8{
+
+    }
+
+
 }
