@@ -10,6 +10,12 @@ app.use(express.urlencoded({extended:true}));
 
 app.use(cors());
 
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/shortUrl').then(function () {
+
+    console.log('Database connected');
+
+});
+
 app.get('/new/:urlToShorten(*)',(req,res)=>{
 
    let {urlToShorten}=req.params;
