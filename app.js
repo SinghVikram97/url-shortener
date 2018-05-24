@@ -29,6 +29,7 @@ app.use('/',require('./routes/urlForward'));
 
 app.use('/',express.static(path.join(__dirname,'public')));
 
+
 app.listen(process.env.PORT  || 4444,()=>{
 
     console.log("Server started at http://localhost:4444");
