@@ -26,7 +26,7 @@ $(document).ready(function () {
 
             shortUrl='https://dat-short.herokuapp.com/'+shortUrl;
 
-            let heading='<h4 id="shortLink" class="mr-2" data-clipboard-target="#shortLink">'+shortUrl+'</h4>';
+            let heading='<h4 id="shortLink" class="mr-2 ml-2" data-clipboard-target="#shortLink">'+shortUrl+'</h4>';
             let btn='<button id="copy" class="btn btn-lg animated" data-clipboard-target="#shortLink"><i class="fas fa-copy mr-2" ></i>Copy</button>';
 
             copyDiv.append(heading);
