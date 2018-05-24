@@ -21,7 +21,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/shortUrl'
 
 
 
-app.use('/',require('./routes/newUrl'));
+app.use('/new',require('./routes/newUrl'));
 
 app.use('/',require('./routes/urlForward'));
 

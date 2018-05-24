@@ -2,7 +2,7 @@ const route=require('express').Router();
 let MODEL_PATH = '../models/';
 const shortUrl = require(MODEL_PATH + 'shortUrl');
 
-route.post('/new/:urlToShorten(*)',(req,res)=>{
+route.post('/:urlToShorten(*)',(req,res)=>{
 
     // To check a valid url
     let regex = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
