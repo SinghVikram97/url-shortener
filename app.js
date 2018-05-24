@@ -3,7 +3,9 @@ const express=require('express');
 const cors=require('cors');
 const mongoose=require('mongoose');
 const path=require('path');
+const favicon=require('serve-favicon');
 const app=express();
+
 
 let MODEL_PATH = './models/';
 const shortUrl = require(MODEL_PATH + 'shortUrl');
@@ -19,6 +21,7 @@ mongoose.connect('mongodb://vikram:urlpass@ds233970.mlab.com:33970/shorturl' || 
 
 });
 
+app.get('/favicon.ico', (req, res) => res.status(204));
 
 
 app.use('/new',require('./routes/newUrl'));
