@@ -5,6 +5,9 @@ const mongoose=require('mongoose');
 const path=require('path');
 const app=express();
 
+let MODEL_PATH = './models/';
+const shortUrl = require(MODEL_PATH + 'shortUrl');
+
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
@@ -19,9 +22,8 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/shortUrl'
 
 
 app.use('/',require('./routes/newUrl'));
+
 app.use('/',require('./routes/urlForward'));
-
-
 
 
 

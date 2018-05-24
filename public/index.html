@@ -5,37 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Url Shortener</title>
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <script src="/Js/clipboard.js"></script>
     <script src="/Js/jquery-3.3.1.js"></script>
-    <script src="Js/bootstrap.js"></script>
-    <script src="Js/index.js"></script>
-    <link rel="stylesheet" href="Css/bootstrap.css">
-    <link rel="stylesheet" href="Css/index.css">
+    <script src="/Js/bootstrap.js"></script>
+    <script src="/Js/index.js"></script>
+    <link rel="stylesheet" href="/Css/bootstrap.css">
+    <link rel="stylesheet" href="/Css/index.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
 </head>
 <body>
-    <div class="container">
-        <div class="row" style="padding-top: 10%">
-            <div class="col-md-3"></div>
-            <div class="col-md-6 text-center" style="padding-left: 2%">
-                <h1 id="heading">Make your links shorter</h1>
-            </div>
-            <div class="col-md-3"></div>
+<div class="container">
+    <div class="row" style="padding-top: 10%">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 text-center" style="padding-left: 2%">
+            <h1 id="heading">Make your links shorter</h1>
         </div>
-        <div class="row pt-4">
-            <div class="col-md-3 col-2"></div>
-            <div class="col-md-6 col-8">
-                <input type="text" class="form-control" id="url" placeholder="Paste your long URL">
-            </div>
-            <div class="col-md-1 col-2">
-                <i class="fas fa-arrow-alt-circle-right" id="submit"></i>
-            </div>
-            <div class="col-md-2 col-0"></div>
+        <div class="col-md-3"></div>
+    </div>
+    <div class="row pt-4">
+        <div class="col-md-3 col-2 " id="off"></div>
+        <div class="col-md-6 col-8">
+            <input type="text" class="form-control" id="url" placeholder="Paste your long URL">
         </div>
-        <div class="row text-center pt-4">
-            <div class="col">
-                <h4 id="shortLink"></h4>
-            </div>
+        <div class="col-md-1 col-2">
+            <i class="fas fa-arrow-alt-circle-right" id="submit"></i>
+        </div>
+        <div class="col-md-2 col-0"></div>
+    </div>
+    <div class="row text-center pt-4">
+        <div class="col pt-1" id="copyDiv">
+
         </div>
     </div>
+</div>
 </body>
 </html>

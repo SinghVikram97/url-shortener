@@ -3,7 +3,7 @@ body{
 }
 #heading{
     font-family: 'Nunito', sans-serif;;
-    font-size: 32px;
+    font-size: 40px;
     font-weight: 300;
     color: rgb(51,51,51);
     margin: 8px 0 0;
@@ -22,16 +22,26 @@ body{
     font-size: 35px;
     position: absolute;
     left: -60px;
-    top:6px
+    top:5px
 }
-@media only screen and  (max-width: 412px) {
-
-    .col-2{
-
-    }
-    .col-8{
-
-    }
-
-
+#shortLink{
+    font-size: 27px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-block;
+    border-bottom: 2px dotted rgb(170, 170, 170);
+}
+#shortLink:hover{
+    color: #7C7C7C;
+}
+#copy{
+    background: linear-gradient(to right, rgb(66, 165, 245), rgb(41, 121, 255));
+    border-radius: 10px;
+    color: white;
+    padding: 5px 20px 5px 20px;
+    box-shadow: rgba(66, 165, 245, 0.5) 0px 5px 6px;
+    cursor: pointer;
+    position: relative;
+    top: -5px;
 }
