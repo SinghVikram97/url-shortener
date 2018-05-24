@@ -24,7 +24,7 @@ $(document).ready(function () {
 
             let shortUrl=data.shorterUrl;
 
-            shortUrl='http://localhost:4444/'+shortUrl;
+            shortUrl='https://protected-dawn-50673.herokuapp.com/'+shortUrl;
 
             let heading='<h4 id="shortLink" class="mr-2" data-clipboard-target="#shortLink">'+shortUrl+'</h4>';
             let btn='<button id="copy" class="btn btn-lg animated" data-clipboard-target="#shortLink"><i class="fas fa-copy mr-2" ></i>Copy</button>';
