@@ -3,6 +3,10 @@ $(document).ready(function () {
     let btn=$('#submit');
     let shortLink=$('#shortLink');
     let copyDiv=$('#copyDiv');
+    let copymsgDiv=$('#copymsgDiv');
+    let copymsgRow=$('#copymsgRow');
+    let clipboard1;
+    let clipboard2;
 
     btn.click(function () {
 
@@ -28,29 +32,68 @@ $(document).ready(function () {
             copyDiv.append(heading);
             copyDiv.append(btn);
 
+            clipboard1= new ClipboardJS('#copy');
+            clipboard2= new ClipboardJS('#shortLink');
+
+
+            clipboard1.on('success', function(e) {
+                console.log('Text copied into clipboard is: <' + e.text + '>');
+                e.clearSelection();
+            });
+
+            clipboard2.on('success', function(e) {
+                console.log('Text copied into clipboard is: <' + e.text + '>');
+                e.clearSelection();
+            });
+
         })
 
     });
 
+
     $(document).on('click','#copy',function(){
 
-        let clipboard= new ClipboardJS('#copy');
-        clipboard.on('success', function(e) {
-           console.log('Text copied into clipboard is: <' + e.text + '>');
-            e.clearSelection();
-        });
+
+          copymsgRow.css('display','');
+
+          copymsgDiv.empty();
+
+
+          let span='<span id="copymsg">Copied to clipboard</span>';
+
+          copymsgDiv.append(span);
+
+        setTimeout(function(){
+
+            copymsgDiv.empty();
+
+        }, 2000);
+
 
     });
+
+
 
     $(document).on('click','#shortLink',function () {
 
-        let clipboard= new ClipboardJS('#shortLink');
-        clipboard.on('success', function(e) {
-            console.log('Text copied into clipboard is: <' + e.text + '>');
-            e.clearSelection();
-        });
+        copymsgRow.css('display','');
+
+        copymsgDiv.empty();
+
+        let span='<span id="copymsg">Copied to clipboard</span>';
+
+        copymsgDiv.append(span);
+
+        setTimeout(function(){
+
+            copymsgDiv.empty();
+
+        }, 2000);
+
 
     });
+
+
 
     $(document).on('mouseenter','#copy', function (event) {
 
@@ -60,6 +103,7 @@ $(document).ready(function () {
 
         $(this).toggleClass('pulse');
     });
+
 
 
 });

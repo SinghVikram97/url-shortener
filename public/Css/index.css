@@ -45,3 +45,10 @@ body{
     position: relative;
     top: -5px;
 }
+#copymsg{
+    font-size: 15px;
+    color: #1c7430;
+}
+#copymsgRow{
+    padding-top: 0.5%;
+}
