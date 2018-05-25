@@ -134,4 +134,29 @@ body{
     }
 
 }
+@media screen and (max-width: 473px) {
+
+    #heading{
+        font-size:157%;
+    }
+
+    #headingCol{
+        margin-left: 0.5% !important;
+    }
+
+    #inputCol{
+        margin-left: 9.4% !important;
+    }
+    #submit{
+        position: absolute;
+        left: 437%;
+        top: -3745%;
+        font-size: 200%;
+    }
+    #url {
+        height: 43px;
+        border-radius: 100px;
+    }
+
+}
 
