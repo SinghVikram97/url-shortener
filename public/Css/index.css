@@ -192,3 +192,36 @@ body{
     }
 
 }
+@media screen and (max-width: 375px) {
+
+    #heading{
+        font-size: 176%;
+        padding: 0;
+    }
+
+    #headingCol{
+        margin: 0;
+        margin-left: 11.4% !important;
+        padding: 0;
+    }
+
+    #inputCol{
+        margin-left: 2.5% !important;
+        padding: 0;
+        padding-top: 4%;
+    }
+    #submit{
+        position: absolute;
+        left: 5%;
+        top: 36%;
+        font-size: 200%;
+    }
+    #url{
+        width: 120%;
+    }
+    #copyRow{
+        padding-top: 8%;
+    }
+
+}
+
