@@ -137,6 +137,29 @@ body{
     }
 
 }
+@media screen and (max-width: 473px) {
+
+    #heading{
+        font-size: 207%;
+    }
+
+    #headingCol{
+        margin-left:-10.6% !important;
+    }
+
+    #inputCol{
+        margin-left: 6% !important;
+    }
+    #url{
+        width: 110%;
+    }
+    #submit{
+        position: absolute;
+        left: -42%;
+        top: 13%;
+    }
+
+}
 @media screen and (max-width: 360px) {
 
     #heading{
