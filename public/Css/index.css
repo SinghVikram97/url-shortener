@@ -57,9 +57,9 @@ body{
     padding-top: 0.5%;
 }
 @media screen and (max-width: 1200px) {
-   #inputCol{
-       margin-left:3.3% !important;
-   }
+    #inputCol{
+        margin-left:3.3% !important;
+    }
     #submit{
         position: absolute;
         left: -75%;
@@ -94,6 +94,9 @@ body{
         position: absolute;
         left: 1020%;
         top: -4200%;
+    }
+    #copy{
+        margin-top: 3%;
     }
 
 }
