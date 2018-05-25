@@ -153,11 +153,12 @@ body{
     #inputCol{
         margin-left: 3% !important;
         padding: 0;
+        padding-top: 4%;
     }
     #submit{
         position: absolute;
         left: 10%;
-        top: 18%;
+        top: 34.5%;
         font-size: 200%;
     }
     #url{
