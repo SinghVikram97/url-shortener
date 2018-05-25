@@ -7,6 +7,7 @@ body{
     font-weight: 300;
     color: rgb(51,51,51);
     margin: 8px 0 0;
+    padding-left: 21.3%;
 }
 #url{
     height: 50px;
@@ -21,8 +22,8 @@ body{
     color: #a9a9a9;
     font-size: 35px;
     position: absolute;
-    left: -60px;
-    top:5px
+    left: -66%;
+    top: 12%;
 }
 #shortLink{
     font-size: 25px;
@@ -52,3 +53,45 @@ body{
 #copymsgRow{
     padding-top: 0.5%;
 }
+@media screen and (max-width: 1200px) {
+   #inputCol{
+       margin-left:3.3% !important;
+   }
+    #submit{
+        position: absolute;
+        left: -75%;
+        top: 14%;
+    }
+}
+@media screen and (max-width: 992px) {
+    #inputCol{
+        margin-left:2% !important;
+    }
+    #submit{
+        position: absolute;
+        left: -101%;
+        top: 14.5%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    #heading{
+        font-size: 38px;
+    }
+
+    #headingCol{
+        margin-left:-8% !important;
+    }
+
+    #inputCol{
+        margin-left: 5% !important;
+    }
+    #submit{
+        position: absolute;
+        left: 1020%;
+        top: -4200%;
+    }
+
+}
+
