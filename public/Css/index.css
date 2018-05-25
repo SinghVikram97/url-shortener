@@ -13,6 +13,9 @@ body{
     height: 50px;
     border-radius: 100px;
 }
+#copyRow{
+    padding-top: 3%;
+}
 
 #url[placeholder]{
     font-size: 18px;
@@ -154,11 +157,14 @@ body{
     #submit{
         position: absolute;
         left: 10%;
-        top: 15%;
+        top: 18%;
         font-size: 200%;
     }
     #url{
         width: 120%;
+    }
+    #copyRow{
+        padding-top: 8%;
     }
 
 }
