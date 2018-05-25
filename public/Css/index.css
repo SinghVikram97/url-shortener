@@ -94,4 +94,44 @@ body{
     }
 
 }
+@media screen and (max-width: 575px) {
+
+    #heading{
+        font-size: 38px;
+    }
+
+    #headingCol{
+        margin-left:-8% !important;
+    }
+
+    #inputCol{
+        margin-left: 9.4% !important;
+    }
+    #submit{
+        position: absolute;
+        left: 438%;
+        top: -4286%;
+    }
+
+}
+@media screen and (max-width: 530px) {
+
+    #heading{
+        font-size: 208%;
+    }
+
+    #headingCol{
+        margin-left:-5% !important;
+    }
+
+    #inputCol{
+        margin-left: 10.4% !important;
+    }
+    #submit{
+        position: absolute;
+        left: 445%;
+        top: -4286%;
+    }
+
+}
 
