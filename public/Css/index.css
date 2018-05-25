@@ -134,29 +134,31 @@ body{
     }
 
 }
-@media screen and (max-width: 473px) {
+@media screen and (max-width: 360px) {
 
     #heading{
-        font-size:157%;
+        font-size: 204%;
+        padding: 0;
     }
 
     #headingCol{
-        margin-left: 0.5% !important;
+        padding: 0;
+        margin: 0;
+        margin-left: 3.4% !important;
     }
 
     #inputCol{
-        margin-left: 9.4% !important;
+        margin-left: 3% !important;
+        padding: 0;
     }
     #submit{
         position: absolute;
-        left: 437%;
-        top: -3745%;
+        left: 10%;
+        top: 15%;
         font-size: 200%;
     }
-    #url {
-        height: 43px;
-        border-radius: 100px;
+    #url{
+        width: 120%;
     }
 
 }
-
