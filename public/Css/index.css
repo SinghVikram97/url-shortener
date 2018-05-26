@@ -29,7 +29,7 @@ body{
     top: 12%;
 }
 #shortLink{
-    font-size: 25px;
+    font-size: 160%;
     font-weight: 300;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -49,6 +49,9 @@ body{
     position: relative;
     top: -5px;
 }
+#copyDiv{
+    padding-left: 1.4%;
+}
 #copymsg{
     font-size: 16px;
     color: #1c7430;
@@ -65,6 +68,9 @@ body{
         left: -75%;
         top: 14%;
     }
+}
+#copymsgDiv{
+    padding-left:2.5%;
 }
 @media screen and (max-width: 992px) {
     #inputCol{
