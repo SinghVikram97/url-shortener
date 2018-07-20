@@ -20,7 +20,7 @@ mongoose.connect('mongodb://vikram:urlpass@ds233970.mlab.com:33970/shorturl' || 
 
     const {Counter} = require(MODEL_PATH + 'shortUrl');
 
-    Counter.remove({},function () {
+
 
         let data=new Counter({
 
@@ -35,9 +35,6 @@ mongoose.connect('mongodb://vikram:urlpass@ds233970.mlab.com:33970/shorturl' || 
             // console.log('counter inserted');
 
         });
-
-
-    });
 
 
 
