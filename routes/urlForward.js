@@ -1,6 +1,6 @@
 const route=require('express').Router();
 let MODEL_PATH = '../models/';
-const shortUrl = require(MODEL_PATH + 'shortUrl');
+const {shortUrl} = require(MODEL_PATH + 'shortUrl');
 
 // Query database and redirect to original url
 route.get('/:urlToForward',(req,res)=>{

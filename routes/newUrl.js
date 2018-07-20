@@ -1,6 +1,6 @@
 const route=require('express').Router();
 let MODEL_PATH = '../models/';
-const shortUrl = require(MODEL_PATH + 'shortUrl');
+const {shortUrl} = require(MODEL_PATH + 'shortUrl');
 
 route.post('/:urlToShorten(*)',(req,res)=>{
 
@@ -27,7 +27,8 @@ route.post('/:urlToShorten(*)',(req,res)=>{
 
                 console.log(urlToShorten);
 
-                let short=Math.floor(Math.random()*100000).toString();
+                let short=logicToShorten(urlToShorten);
+
                 let data=new shortUrl({
 
                     originalUrl:urlToShorten,
@@ -59,5 +60,10 @@ route.post('/:urlToShorten(*)',(req,res)=>{
     }
 
 });
+
+function logicToShorten(urlToShorten) {
+
+
+}
 
 module.exports=route;
