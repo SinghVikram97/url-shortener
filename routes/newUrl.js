@@ -43,7 +43,6 @@ route.post('/:urlToShorten(*)',(req,res)=>{
                     }
 
                 });
-
                 res.json(data);
             }
         });
@@ -63,6 +62,7 @@ route.post('/:urlToShorten(*)',(req,res)=>{
 
 function logicToShorten(urlToShorten) {
 
+    return Math.floor(Math.random()*100000).toString();
 
 }
 

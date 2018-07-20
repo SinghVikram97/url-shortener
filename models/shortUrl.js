@@ -26,11 +26,9 @@ urlSchema.pre('save', function(next) {
     // Only one document in counter collection which has id:url_count
     Counter.findByIdAndUpdate({ _id: 'url_count' }, { $inc: { count: 1 } }, function(err, counter) {
         if(err) return next(err);
-        console.log(counter);
-        console.log(counter.count);
-        doc._id = counter.count;
-        doc.created_at = new Date();
-        console.log(doc);
+        // console.log(counter);
+        // console.log(counter.count);
+        // console.log(doc);
         next();
     });
 });

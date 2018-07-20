@@ -22,6 +22,8 @@ $(document).ready(function () {
 
             copyDiv.empty();
 
+            console.log(data);
+
             let shortUrl=data.shorterUrl;
 
             shortUrl='https://dat-short.herokuapp.com/'+shortUrl;
