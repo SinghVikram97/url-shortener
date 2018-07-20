@@ -16,7 +16,7 @@ $(document).ready(function () {
 
         let getUrl='/new/'+url;
 
-        console.log(getUrl);
+        // console.log(getUrl);
 
         $.post(getUrl,function (data) {
 

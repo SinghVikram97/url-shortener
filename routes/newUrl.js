@@ -9,27 +9,43 @@ route.post('/:urlToShorten(*)',(req,res)=>{
 
     let {urlToShorten}=req.params;
 
+    // Test if valid url
     if(regex.test(urlToShorten)===true){
 
-        // Logic to create short url
+        // Find if url already shortened
+        shortUrl.findOne({'originalUrl':urlToShorten},function (err,doc) {
 
-        let short=Math.floor(Math.random()*100000).toString();
-        let data=new shortUrl({
+            if(doc){
 
-            originalUrl:urlToShorten,
-            shorterUrl:short
+                // Already shortened
+                res.json(doc);
 
-        });
-
-        data.save((err)=>{
-
-            if(err){
-                res.send('Error saving to the database');
             }
+            else{
 
+                // Logic to create short url
+
+                console.log(urlToShorten);
+
+                let short=Math.floor(Math.random()*100000).toString();
+                let data=new shortUrl({
+
+                    originalUrl:urlToShorten,
+                    shorterUrl:short
+
+                });
+
+                data.save((err)=>{
+
+                    if(err){
+                        res.send('Error saving to the database');
+                    }
+
+                });
+
+                res.json(data);
+            }
         });
-
-        res.json(data);
     }
 
     else{
