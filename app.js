@@ -8,37 +8,48 @@ const app=express();
 
 
 let MODEL_PATH = './models/';
-const shortUrl = require(MODEL_PATH + 'shortUrl');
+
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
 app.use(cors());
 
-mongoose.connect('mongodb://vikram:urlpass@ds233970.mlab.com:33970/shorturl' || 'mongodb://localhost:27017/shortUrl').then(function () {
+mongoose.connect('mongodb://vikram:urlpass@ds233970.mlab.com:33970/shorturl' || 'mongodb://localhost:27017/short').then(function () {
 
 
     const {Counter} = require(MODEL_PATH + 'shortUrl');
+    // const {shortUrl} = require(MODEL_PATH + 'shortUrl');
 
 
+        // shortUrl.remove({}, function() {
+        // console.log('APP: URL collection emptied');
+        // });
 
-        let data=new Counter({
+        Counter.remove({},function () {
 
-            _id:'url_count',
-            count:10000
+            let data=new Counter({
+
+                _id:'url_count',
+                count:10000
+
+            });
+
+            data.save((err)=>{
+
+                if(err) return console.error(err);
+                // console.log('counter inserted');
+
+            });
 
         });
 
-        data.save((err)=>{
-
-            if(err) return console.error(err);
-            // console.log('counter inserted');
-
-        });
 
 
 
 
+}).catch((err)=>{
+    console.log(err);
 });
 
 app.get('/favicon.ico', (req, res) => res.status(204));

@@ -1,6 +1,7 @@
 const route=require('express').Router();
 let MODEL_PATH = '../models/';
 const {shortUrl} = require(MODEL_PATH + 'shortUrl');
+const shortNum=require('../shortNum');
 
 route.post('/:urlToShorten(*)',(req,res)=>{
 
@@ -18,52 +19,44 @@ route.post('/:urlToShorten(*)',(req,res)=>{
             if(doc){
 
                 // Already shortened
-                res.json(doc);
+                res.send({
+                    hash:shortNum.encode(doc._id)
+                })
 
             }
             else{
 
                 // Logic to create short url
 
-                console.log(urlToShorten);
-
-                let short=logicToShorten(urlToShorten);
-
                 let data=new shortUrl({
 
-                    originalUrl:urlToShorten,
-                    shorterUrl:short
+                    originalUrl:urlToShorten
 
                 });
 
-                data.save((err)=>{
+                data.save((err,data)=>{
 
                     if(err){
+                        console.log(err);
                         res.send('Error saving to the database');
+                    }
+                    else{
+                        res.send({
+                            hash:shortNum.encode(data._id)
+                        })
                     }
 
                 });
-                res.json(data);
+
             }
         });
     }
 
     else{
-        let data=new shortUrl({
-
-            originalUrl:urlToShorten,
-            shorterUrl:'Invalid Url'
-
-        });
-        res.json(data);
+        //    Handle invalid url
     }
 
 });
 
-function logicToShorten(urlToShorten) {
-
-    return Math.floor(Math.random()*100000).toString();
-
-}
 
 module.exports=route;

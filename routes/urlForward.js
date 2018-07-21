@@ -1,17 +1,18 @@
 const route=require('express').Router();
 let MODEL_PATH = '../models/';
 const {shortUrl} = require(MODEL_PATH + 'shortUrl');
+const shortNum=require('../shortNum');
 
 // Query database and redirect to original url
 route.get('/:urlToForward',(req,res)=>{
 
     let shorterUrl=req.params.urlToForward;
 
-    console.log(shorterUrl);
+    let decodedId=shortNum.decode(shorterUrl);
 
-    // Find one
+    // Find decodedId in database
 
-    shortUrl.findOne({'shorterUrl':shorterUrl},(err,data)=>{
+    shortUrl.findOne({'_id':decodedId},(err,data)=>{
 
         console.log(data);
 

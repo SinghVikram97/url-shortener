@@ -24,7 +24,7 @@ $(document).ready(function () {
 
             console.log(data);
 
-            let shortUrl=data.shorterUrl;
+            let shortUrl=data.hash;
 
             shortUrl='https://dat-short.herokuapp.com/'+shortUrl;
 
